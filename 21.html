@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+     <script>
+        let array1=[];
+        let array2=[];
+        let number=Number(prompt("enter your array limit"))
+        for (let i=0;i<number;i++){
+            array1.push(prompt("enter your values "))
+        }
+        for (i=0;i<number-1;i++){
+            array2[i]=array1[i]*array1[i+1]
+        }
+        document.getElementById("result").innerHTML=array2
+        console.log(array2)
+     </script>
+
+</body>
+</html>

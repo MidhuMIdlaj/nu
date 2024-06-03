@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <body onload="main()">
+        <script>
+          function main() {
+            let size = Number(prompt("Enter the size of array:"));
+            let obj = new Array2D(size)
+            
+            obj.getArray();
+            obj.displayArray();
+          }
+      
+          class Array2D{
+            constructor(size){
+              this.size = size
+              this.array = []
+              
+            }
+      
+            getArray(){
+              for (let i = 0; i < this.size; i++) {
+                this.array[i] = []
+                for (let j = 0; j < this.size; j++) {
+                  this.array[i][j] = Number(prompt('Enter values to the array : '));
+                }
+              }
+            }
+      
+            displayArray(){
+              console.log('Array elements are : ')
+              console.log(this.array)
+            }
+          }
+      
+        </script>
+      </body>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let my_string =String(prompt("Enter input String :")) 
+
+        try {
+            
+            my_string = my_string.split("").reverse().join("");
+            console.log(`Reversed string is : ${my_string}`);
+        } catch (err) {
+            
+            console.log(`Error : ${err.message}`);
+        } finally {
+            
+            console.log(`Type of my_string is : ${typeof my_string}`);
+        }
+        </script>
+</body>
+
+</html>

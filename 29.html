@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function myFilter(myArray, callback) {
+            return callback(myArray)
+        }
+        myArray = [2, 4, 6, 8, 1]
+
+        function callback(arr) {
+            let sum = arr.reduce((acc, item) => (acc + item), 0)
+            console.log('sum is ', sum)
+
+            if (sum % 2 === 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        console.log(myFilter(myArray, callback))
+    </script>
+</body>
+</html>

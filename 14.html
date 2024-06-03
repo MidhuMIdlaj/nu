@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+
+    <label for="">enter array 1 limit</label>
+    <input id="i1" type="text">
+    <label for="">enter array 2 limit</label>
+    <input id="i2" type="text">
+    <button onclick="sample()">=</button> <br> <br>
+    <div id="result"><input type="" name="" id=""></div>
+   <script>
+      function sample(){
+        var array1=[]
+        var array2=[]
+        var array3=[]
+        let i1=Number(document.getElementById("i1").value)
+         for (let i=0; i< i1; i++){
+              array1[i]=[]
+            for (let j=0; j<i1; j++){
+                array1 [i][j]=Number(prompt(""))
+            }
+         }
+         console.log(array1)
+         let i2=Number(document.getElementById("i2").value)
+         for (let i=0; i< i2; i++){
+              array2[i]=[]
+            for (let j=0; j<i2; j++){
+                array2 [i][j]=Number(prompt(""))
+            }
+        }
+        console.log(array2)
+         for (let i=0; i< i2; i++){
+              array3[i]=[]
+            for (let j=0; j<i2; j++){
+                array3[i][j]=array1[i][j]+array2[i][j];
+         }      
+         }
+         console.log('sum of array1 and array2',array3);
+         
+   }
+   </script>
+
+</body>
+</html>

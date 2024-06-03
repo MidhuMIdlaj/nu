@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="moon(event)" id="0"
+        style="width: 24em; height: 29em; margin-left: 5em; margin-top: 5em; font-size: large; background-color: aqua;">click on me
+        <br><br><br> Title : Bill Gates <br><br><br> Author : The Road Ahead</title></button>
+    <button onclick="moon(event)" id="1"
+        style="width: 24em; height: 29em; margin-left: 1em; margin-top: 5em; font-size: large;background-color: aqua;">click on me
+        <br><br><br> Title : Steve Job <br><br><br> Author : Walter Isaacson</title></button>
+    <button onclick="moon(event)" id="2"
+        style="width: 24em; height: 29em; margin-left: 1em; margin-top: 5em; font-size: large; background-color: aqua;">click on me
+        <br><br> Title : Mockingjay: The Final Book of <br><br> The Hunger Games <br><br> Author : Suzanne Collin
+        </title></button>
+    <div id="status" style="color: gray; font-size: large; margin-top: 2em; margin-left: 10em;"></div>
+    <script>
+        var library = [
+                {
+                    title: 'The Road Ahead',    
+                    author: 'Bill Gates',
+                    readingStatus: true
+
+                },
+                {
+                    title: 'Steve Jobs',
+                    author: 'Walter Isaacson',
+                    readingStatus: true
+                },
+                {
+                    title: 'Mockingjay: The Final Book of The Hunger Games',
+                    author: 'Suzanne Collins',
+                    readingStatus: false
+                }
+            ];
+        function moon(e) {
+            console.log(e.target.id)
+            
+
+            library.forEach((library, index) => {
+                if (index == (e.target.id)) {
+                    if (library.readingStatus) {
+                        document.getElementById('status').innerHTML = ` You have already read <b style="color:red;">"${library.title}"</b> by <b>"${library.author}"</b>`
+
+
+                    } else {
+                        document.getElementById('status').innerHTML = ` Go and read <b style="color:red;">"${library.title}"</b> by "${library.author}"`
+
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

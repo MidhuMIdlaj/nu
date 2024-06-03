@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <script>
+          let my_height = Number(prompt('Enter your Height, (normal height:70-190)'));
+          console.log('input :'+ my_height)
+          try {
+            if (isNaN(my_height)) {
+              throw new Error("notANumberError");
+            } else if (my_height > 190) {
+              throw new Error("hugeHeightError");
+            } else if (my_height < 70) {
+              throw new Error("tinyHeightError");
+            } else {
+              console.log("Height is within the normal range");
+            }
+          }
+         
+          catch (err) {
+            console.log(`Error : ${err.message}`)
+          }
+        </script>
+      </body>
+
+</html>

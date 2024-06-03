@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <label for="">enter a number</label><br> <br>
+    <input id="i1" type="text"><br> <br>
+    <button onclick="sample()" type="button">=</button><br> <br>
+     <hr>
+    <div id="result"></div>
+   </center>
+
+    <script>
+        function sample(){
+          let i1=document.getElementById("i1").value
+          let result=document.getElementById("result")
+          number=parseFloat(i1)
+          for(let i=1;i<=10;i++){
+             result.innerHTML+=i+"x"+"5"+"="+number*i+"<br>"
+          }
+        
+          console.log(a)
+        }
+    </script>
+</body>
+</html>

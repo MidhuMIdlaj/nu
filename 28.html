@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <body>
+                <script>
+                  class Car {
+                    constructor(name, mileage, max_speed) {
+                      this.name = name;
+                      this.mileage = mileage;
+                      this.max_speed = max_speed;
+                    }
+                  }
+                  let name = prompt('Enter name of the car')
+                  let mileage = prompt('Enter mileage of the car (km/h)')
+                  let max_speed = prompt('Enter maximum speed of the car (km/h)')
+                  let car1 = new Car(name, mileage, max_speed)
+                  console.log(car1)
+                </script>
+</body>
+</html>

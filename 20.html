@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <label for="">enter a number</label>
+     <input id="i1" type="text">
+     <button type="button" onclick="sample()">=</button>
+     <pre id="result"></pre>
+    <script>
+        function sample(){
+     let number= Number(document.getElementById("i1").value)
+     let s=1;
+     let soon='';
+     for (let i=1;i<=number;i++){
+        for (let j=1;j<=i;j++){
+           soon+=s+' ';
+            s++;
+        }
+         soon+='\n';
+     }
+     console.log(soon);
+     document.getElementById("result").innerHTML=soon;
+    }
+    </script>
+</body>
+</html>

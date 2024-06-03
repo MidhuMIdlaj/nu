@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">enter your mark</label>
+    <input id="i1" type="text">
+    <button onclick="sample()" >click for result</button>
+    <div id="result"></div>
+    <script>
+        function sample(){
+         let i1=document.getElementById("i1").value
+         number1=parseFloat(i1)
+         let res
+         if (number1>50){
+            res='passed'
+         }else if(number1<50 ){
+            res='failed'
+         }
+         document.getElementById("result").innerText=res
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">enter your total mark</label>
+     <input id="i1" type="number">
+     <button onclick="sample()">click for your total mark</button>
+     <div id="result"></div>
+
+     <script>
+        function sample(){
+          let i1=document.getElementById("i1").value
+          number1=parseFloat(i1)
+          let res
+
+          if(number1>90){
+            res='A'
+          }else if (number1>80&&89) {
+            res='B'
+          }else if(number1>70&&79) {
+            res='C'
+          }else if(number1>60&&69){
+            res='D'
+          }else if(number1>50&&59){
+            res='E'
+          }else if(number1<50){
+            res='failed'
+          }
+          document.getElementById("result").innerHTML=res
+        }
+     </script>
+  
+</body>
+</html>

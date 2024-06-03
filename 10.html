@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+var arrLimit = parseInt(prompt("Enter the limit of the array:"))
+
+var arr1 = []
+var arr2 = []
+var temparr = []
+console.log("Enter the values of Array 1:");
+for(var i=0 ; i < arrLimit ; i++){
+   arr1.push(prompt(""))
+}
+console.log("Enter the values of Array 2:");
+for(var i=0 ; i < arrLimit ; i++){
+   arr2.push(prompt(""))
+}
+
+temparr = arr1
+arr1 = arr2
+arr2 = temparr
+console.log("Arrays after swapping:");
+console.log("Array 1:"+arr1);
+console.log("Array 2:"+arr2);
+</script>

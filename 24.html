@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+          
+          class Area {
+            circle(radius) {
+              return (3.14 * radius * radius)
+            }
+            square(side) {
+              return (side * side)
+            }
+            rectangle(length, breadth) {
+              return (length * breadth)
+            }
+      
+            triangle(breadth, height) {
+              return (0.5 * breadth * height)
+            }
+          }
+      
+          class MyClass extends Area {
+            main() {
+              let input = Number(prompt('Select your choice \n 1. Circle \n 2. Square \n 3. Rectangle \n 4. Triangle'));
+      
+              switch (input) {
+                case 1: this.circle()
+                  break;
+                case 2: this.square()
+                  break;
+                case 3: this.rectangle()
+                  break;
+                case 4: this.triangle()
+                  break;
+                default: alert('Enter a valid Input...You Idiot!!');
+              }
+            }
+      
+            circle() {
+              let r = Number(prompt('Enter the radius of the circle : '))
+              let area = super.circle(r)
+              alert('Area of the circle : ' + area)
+            }
+      
+            square() {
+              let s = Number(prompt('Enter the length of a side  of the sqaure :'))
+              let area = super.square(s)
+              alert('Area of the square : ' + area)
+            }
+      
+            rectangle() {
+              let l = Number(prompt('Enter the length of the rectangle :'))
+              let b = Number(prompt('Enter the breadth of the rectangle : '))
+              let area = super.rectangle(l, b)
+              alert('Area of the rectangle : ' + area)
+            }
+      
+            triangle() {
+              let h = Number(prompt('Enter the height of the triangle :'))
+              let b = Number(prompt('Enter the breadth of the triangle : '))
+              let area = super.triangle(b, h)
+              alert('Area of the triangle : ' + area)
+            }
+          }
+      
+      
+          let start = new MyClass();
+          start.main();
+        </script>
+      </body>
+</html>
